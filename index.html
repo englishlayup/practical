@@ -1,0 +1,505 @@
+<html>
+
+<head>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto+Condensed:300,400,700" rel="stylesheet">
+    <link href="fonts/xolonium.css" type="text/css" rel="stylesheet">
+    <link href="css/animation.css" type="text/css" rel="stylesheet">
+    <link href="fonts/ROG-Fonts.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+</head>
+
+<body onload="toggleSpec(), hoverEco(), initComparisons(), toggleOpacity(), backtoTopBttn()">
+    <div id="hd" style="position: absolute; width: 100%; left: 0; overflow: hidden; z-index: 0;">
+        <a id="backtoTop" onclick="toTop()">
+            <i class="fas fa-chevron-circle-up"></i>
+        </a>
+        <div id="nav-container">
+            <ul>
+                <li>
+                    <a onclick="scrollToDiv('spec')">
+                        <img src="img/top_01.jpg" />
+                        <h4>SPEC OVERVIEW</h4>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="scrollToDiv('custom')">
+                        <img src="img/top_02.jpg" />
+                        <h4>LEADING CUSTOMIZATION</h4>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="scrollToDiv('performance')">
+                        <img src="img/top_03.jpg" />
+                        <h4>PERFORMANCE</h4>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="scrollToDiv('audio')">
+                        <img src="img/top_04.jpg" />
+                        <h4>ROG AUDIO</h4>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="scrollToDiv('more')">
+                        <img src="img/top_05.jpg" />
+                        <h4>ROG GIVES YOU MORE</h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="spec">
+            <ul id="spec-toggle">
+                <li class="hd-active" id="spec-diy" onclick="togglediv1('diy', 'overview')">
+                    <h4>DIY Friendly Design</h4>
+                </li>
+                <li class="" id="spec-overview" onclick="togglediv1('overview', 'diy')">
+                    <h4>Overview</h4>
+                </li>
+            </ul>
+            <div class="hd-w1300">
+                <figure class="diy">
+                    <div class="spec-main"></div>
+                    <ol>
+                        <li style="top: 5.5%;left: 15%;">
+                            <b>ESD GUARDS</b>
+                            <p>Greater electrostatic protection than standard.
+                                <br>ESD Guards cover the USB, audio and LAN ports.</p>
+                            <img style="top: 0;right: 105%;" src="img/spec-diy-1.jpg" alt="ESD GUARDS" style="opacity: 1;">
+                        </li>
+                        <li style="top: 34.5%;left: 15%;">
+                            <b>TRUEVOLT USB</b>
+                            <p>Rock-steady 5V power regulation that ensures a stable USB connection.</p>
+                            <img style="top: 0;right: 105%;" src="img/spec-diy-2.jpg" alt="TRUEVOLT USB" style="opacity: 1;">
+                        </li>
+                        <li style="top: 66.5%;left: 15%;">
+                            <b>2 X SAFESLOT</b>
+                            <p>Provides stronger PCIe device retention and greater shearing resistance.</p>
+                            <img style="top: 0;right: 105%;margin-top: -15%;" src="img/spec-diy-3.jpg" alt="SAFESLOT" style="opacity: 1;">
+                        </li>
+                        <li style="top: 16.5%;left: 74%;">
+                            <b>4 X Q-DIMM</b>
+                            <p>One sided clips for super-simple, super-secure handling of memory modules.</p>
+                            <img style="top: 0;left: 105%; margin-top: -15%;" src="img/spec-diy-4.png" alt="Q-DIMM" style="opacity: 1;">
+                        </li>
+                        <li style="top: 51%;left: 74%;">
+                            <b>3 X Q-SLOT</b>
+                            <p>Clip to swap or secure your graphics card.</p>
+                            <img style="top: 0;left: 105%;margin-top: -15%;" src="img/spec-diy-5.png" alt="Q-SLOT" style="opacity: 1;">
+                        </li>
+                        <li style="top: 80.5%;left: 74%;">
+                            <b>Q-CONNECTOR</b>
+                            <p>Sorts all front-panel cables.</p>
+                            <img style="top: 0;left: 105%;margin-top: -25%;" src="img/spec-diy-6.png" alt="Q-CONNECTOR" style="opacity: 1;">
+                        </li>
+                    </ol>
+                </figure>
+                <figure class="overview hd-sec-hidden">
+                    <div class="spec-main"></div>
+                    <ol>
+                        <li style="top: 1.5%; left: 8%">
+                            <p>
+                                Pre-mounted I/O shield
+                                <br> Clr CMOS
+                                <br> BIOS Flashback
+                            </p>
+                        </li>
+                        <li style="top: 12.5%; left: 8%;">
+                            <p>2x2 MU-MIMO 802.11AC</p>
+                        </li>
+                        <li style="top: 17%; left: 8%;">
+                            <p>2 x USB 2.0 Ports</p>
+                        </li>
+                        <li style="top: 21%; left: 8%;">
+                            <p>1 x PS/2 Port</p>
+                        </li>
+                        <li style="top: 24.5%; left: 8%;">
+                            <p>8 x USB 3.1 Gen1 Ports</p>
+                        </li>
+                        <li style="top: 33.5%; left: 8%;">
+                            <p>Intel I211-AT
+                                <br>LANGuard</p>
+                        </li>
+                        <li style="top: 43.5%; left: 8%;">
+                            <b>Dual M.2 Socket 3 Type M</b>
+                            <p>
+                                ・ 1 x 2242-2280 (PCIe 3.0 x4)
+                                <br> ・ 1 x 2242-22110 (PCIe 3.0 x4 + SATA)
+                            </p>
+                        </li>
+                        <li style="top: 63%; left: 8%;">
+                            <b>Multi-GPU SLI/CFX Support</b>
+                            <p>
+                                ・ 2 x PCIe 3.0 x16 slot (supports x16, x8/x8)
+                                <br> ・ 1 x PCIe 2.0 x4 slots (chipset)
+                                <br> ・ 2 x PCIe 2.0 x1 slot (chipset)
+                                <br>
+                            </p>
+                            <img src="img/spec-VR.jpg" style="width: 80px; margin-left: 0px; opacity: 1;top: 0;
+                            right: 105%;">
+                        </li>
+                        <li style="top: 79%; left: 8%;">
+                            <b>SupremeFX S1220 CODEC</b>
+                            <p>
+                                ・ ES9023P High Definition DAC
+                                <br> ・ Impedance sense for front and rear
+                                <br> ・ 120dB SNR stereo playback output
+                                <br> ・ 113dB SNR recording input
+                                <br>
+                            </p>
+                            <b>Sonic Studio III &amp; Sonic Radar III</b>
+                        </li>
+                        <li style="top: 7%; left: 76%;">
+                            <p>Q-Code
+                                <br>Multicolored Q-LED</p>
+                        </li>
+                        <li style="top: 16.5%; left: 76%;">
+                            <b>
+                                2 x 4-pin AURA RGB headers
+                                <br> 2 x 3-pin Addressable headers
+                            </b>
+                        </li>
+                        <li style="top: 30%; left: 76%;">
+                            <b>DDR4 3600MHz+ (OC)</b>
+                            <p>・ 4 x DIMM Dual Channel DDR4 </p>
+                        </li>
+                        <li style="top: 38.5%; left: 76%;">
+                            <b>AMD Socket AM4 </b>
+                        </li>
+                        <li style="top: 46%; left: 76%;">
+                            <p>USB 3.1 Gen2 Front Panel Conector</p>
+                        </li>
+                        <li style="top: 57.5%; left: 76%;">
+                            <p>6 x SATA 6G ports</p>
+                        </li>
+                        <li style="top: 71.5%;; left: 76%;">
+                            <p>AMD X470 Chipset
+                                <br>ROG Logo RGB LED</p>
+                            <img class="lazyLoad" src="img/spec-amd_x470.png" alt="Intel X470 Chipset" style="opacity: 1; top: 3px; left: 105%;">
+                        </li>
+                        <li style="top: 87%; left: 76%">
+                            <p>W_IN/OUT, W_Flow headers</p>
+                        </li>
+                    </ol>
+                </figure>
+            </div>
+        </div>
+        <div id="custom" class="hd-sec-lighting">
+            <h2>
+                <span class="top">leading</span>CUSTOMIZATION</h2>
+            <div class="hd-w1200">
+                <div class="hd-col55 txt-left fleft">
+                    <h3 class="txt-red">AURA SYNC</h3>
+                    <p style="margin-bottom: 20px;">ASUS Aura offers full RGB lighting control with a variety of functional presets for built-in RGB LEDs
+                        and for lighting strips connected to the onboard RGB headers. And it can all be synced with an ever-growing
+                        portfolio of Aura-capable ASUS hardware.</p>
+                    <p style="margin-bottom: 120px">
+                        <small class="txt-grey">* The Aura RGB-strip header supports 5050 RGB LED strips with a max power rating of 3A (12V). For
+                            maximum brightness, strip length should not exceed 3m.
+                            <br>**RGB extension cables are included. LED strips and Aura Sync-compatible devices are sold separately.</small>
+                    </p>
+                    <ul id="light-mode" class="hd-controls txt-center">
+                        <li class="light-active" onclick="changeA('rainbow 3s infinite','hd-rainbow')" class="">
+                            <img src="img/rainbow.png" alt="Rainbow" style="opacity: 1;">
+                            <b>Rainbow</b>
+                        </li>
+                        <li onclick="changeA('cycle 8s infinite', '')">
+                            <img src="img/color_cycle.png" alt="Color cycle" style="opacity: 1;">
+                            <b>Color cycle</b>
+                        </li>
+                        <li onclick="changeA('rainbow 21s infinite , comet 3s -.5s infinite', 'hd-comet')">
+                            <img src="img/comet.png" alt="Comet" style="opacity: 1;">
+                            <b>Comet</b>
+                        </li>
+                        <li onclick="changeA('flash 2s infinite', 'hd-flash')">
+                            <img src="img/flash_dash.png" alt="Flash and dash" style="opacity: 1;">
+                            <b>Flash and dash</b>
+                        </li>
+                        <li onclick="changeA('cycle 8s infinite', 'hd-wave')">
+                            <img src="img/wave.png" alt="Wave" style="opacity: 1;">
+                            <b>Wave</b>
+                        </li>
+                        <li onclick="changeA('yoyo 4s infinite', 'hd-yoyo')">
+                            <img src="img/yoyo.png" alt="Glowing Yo-Yo" style="opacity: 1;">
+                            <b>Glowing Yo-Yo</b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hd-lightingbox fright">
+                    <div class="hd-lighting">
+                        <div id="greybg"></div>
+                        <div id="color" style="background-color: rgb(206, 0, 0); color: rgb(255, 255, 255); animation: rainbow 3s infinite;" class="hd-rainbow"></div>
+                        <img id="hd-lightingimg" src="img/lighting.png" class="hd-w1250off">
+                        <p id="strip_add">Addressable Strip</p>
+                        <p id="strip_rgb">RGB Strip</p>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+        <div class="hd-sec-ecosystem hd-w1200 txt-center">
+            <h3 class="txt-red">AURA SYNC X PHILIPS HUE</h3>
+            <p>ROG Crosshair VII Hero takes ASUS Aura into the home — and now it also lets you synchronize effects with Philips®
+                Hue personal wireless lighting. Easily control your Hue light bulbs, strips and lamps from the simple Aura
+                app&nbsp;, and create immersive illumination that extends beyond your rig to make the whole room part of
+                your gaming experience.</p>
+            <div class="img-comp-container">
+                <div class="img-comp-img">
+                    <img src="img/ecosystem-2.jpg" width="1200px" height="836px">
+                </div>
+                <div class="img-comp-img img-comp-overlay">
+                    <img src="img/ecosystem-1.jpg" width="1200px" height="836px">
+                </div>
+                <div class="label" id="gaming-style">
+                </div>
+                <div class="label" id="life-style">
+                </div>
+            </div>
+        </div>
+        <div id="performance">
+            <h2 class="left">performance</h2>
+            <div class="hd-sec-mode hd-w1300 txt-center hd-bg">
+                <h3 class="txt-red">Media-acclaimed UEFI BIOS</h3>
+                <p class="hd-ib hd-w800">The renowned ROG UEFI (BIOS) provides everything you need to configure, tweak, and tune your Ryzen-based
+                    rig. It offers intelligently simplified options for newcomers to PC DIY, as well as comprehensive features
+                    for seasoned veterans.</p>
+                <figure class="hd-ib hd-col50 ib-top">
+                    <div class="ez_mode">
+                        <img src="img/Media-acclaimed-uefi-bios-1.png" style="opacity: 1;">
+                        <ul class="hd-tips">
+                            <li>
+                                <p class="tipbox">
+                                    <b>EZ Tuning Wizard:</b> OC and RAID. Select your hardware and apply different scenarios
+                                    to tune system performance, or streamline your RAID configuration for faster data retrieval
+                                    and backups.</p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>Intuitive graphical fan control:</b> Fine-tune individual fans simply by dragging a curve
+                                    with the mouse.</p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>SATA Information:</b> View SATA port details for easy device recognition.</p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>AURA on/off/stealth:</b> Optimize performance and cooling, monitor stats, enable and
+                                    disable onboard features, and configure which ports and drives have priority</p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>Fast Clock Adjustment:</b> Use mouse controls to change the time and date.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="mode-content txt-left">Designed for easy setup, the EZ Mode presents all the vital settings and stats on a single page. With
+                        guided wizards, drag and drop capability that takes the hassle out of complex tasks, and one-click
+                        convenience to apply important settings, your rig will be up and running in no time.</p>
+                </figure>
+                <figure class="hd-ib hd-col50 ib-top">
+                    <div class="advanced_mode">
+                        <img src="img/Media-acclaimed-uefi-bios-2.png" style="opacity: 1;">
+                        <ul class="hd-tips">
+                            <li>
+                                <p class="tipbox">
+                                    <b>My Favorites:</b> Quickly find tuning options and add preferred tools to the list.</p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>EZ Flash 3:</b> Flash the latest BIOS via the internet from within the BIOS.</p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>S.M.A.R.T.:</b> Check your storages devices' Self-Monitoring, Analysis, and Reporting
+                                    Technology logs to gauge reliability and to identify potential failures.</p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>GPU POST:</b> Automatically detect selected ASUS graphics cards to view detailed information.</p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>Secure Erase:</b> Restore your SSDs to factory-fresh condition.</p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>Last Modified Log:</b> Track the latest changes and save preferred profiles onto a USB
+                                    drive.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>SATA Port Renaming:</b> Rename SATA ports for easy identification.</p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>Search Function:</b> Quickly and easily find the option or setting you're looking for.</p>
+                            </li>
+                            <li>
+                                <p class="tipbox">
+                                    <b>ASUS User Profile:</b> Port configuration settings between different BIOS versions or
+                                    share them with friends.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="mode-content txt-left">When you're ready for a deeper dive into the configuration of your system, delve into the UEFI's Advanced
+                        mode and take complete control. Each section is intuitively organized, and a built-in search feature
+                        makes it easy to find the options you need. Advanced functions are coded with the intelligence to
+                        adapt to your settings, and when you're ready to take charge, parameters have the granularity to
+                        dial in performance just the way you want.</p>
+                </figure>
+            </div>
+        </div>
+        <div id="audio">
+            <h2 class="right">
+                <span class="left">ROG</span>audio</h2>
+            <div class="hd-sec-audio txt-center" style="background: url(img/bg-glow.jpg) center 20% no-repeat;background-size: contain;">
+                <div class="hd-w1200" style="z-index: 3;">
+                    <h3 class="txt-red">SupremeFX</h3>
+                    <div class="hd-w1100">
+                        <p>ROG's SupremeFX audio technology has levelled up, delivering an exceptional 113dB signal-to-noise
+                            ratio on the line-in connection to provide best-ever recording quality. We've also added a low-dropout
+                            regulator for cleaner power delivery to the SupremeFX S1220 codec, an ESS® Sabre Hi-Fi ES9023P
+                            digital-to-analog converter for superior front-panel output, and a Texas Instruments® RC4580
+                            op amp for high gain with low distortion — all to deliver audio that envelops you as never before.</p>
+                    </div>
+                </div>
+                <div class="hd-w1300 txt-left">
+                    <ul id="asus-audio" class="hd-supremefx">
+                        <li id="supremefx">
+                            <img src="img/supremefx.png">
+                        </li>
+                        <li class="">
+                            <img src="img/supremefx-1.png">
+                            <div class="txt-box">
+                                <h4 class="txt-red">S1220 Codec</h4>
+                                <p>10 DAC channels, simultaneous 7.1 channel playback, independent 2.0-channel, multiple-stream
+                                    stereo to front panel outputs</p>
+                            </div>
+                        </li>
+                        <li class="">
+                            <img src="img/supremefx-2.png">
+                            <div class="txt-box">
+                                <h4 class="txt-red">ESS® SABRE ES9023P DAC</h4>
+                                <p>Creates a perfect balance for top-tier audio clarity capable of -112dB THD</p>
+                            </div>
+                        </li>
+                        <li class="audio-active">
+                            <img src="img/supremefx-3.png">
+                            <div class="txt-box">
+                                <h4 class="txt-red">Nichicon caps</h4>
+                                <p>Fine-quality Japanese-made components that produce a warmer, natural sound with exceptional
+                                    clarity and fidelity.</p>
+                            </div>
+                        </li>
+                        <li class="">
+                            <img src="img/supremefx-4.png">
+                            <div class="txt-box">
+                                <h4 class="txt-red">Gold-Plated Audio Jacks</h4>
+                                <p>Backlit audio jacks save you from fumbling around in the dark</p>
+                            </div>
+                        </li>
+                        <li class="">
+                            <img src="img/supremefx-5.png">
+                            <div class="txt-box">
+                                <h4 class="txt-red">Switching Mosfets</h4>
+                                <p>Unique design allows the codec's impedance-sensing function to be ported with either the
+                                    front or rear headphone outputs</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul id="audio-toggle" class="audio-switch hd-w1100">
+                    <li onclick="changePos(1)">
+                        <h4 class="txt-red">S1220 CODEC</h4>
+                        <span></span>
+                    </li>
+                    <li onclick="changePos(2)">
+                        <h4 class="txt-red">ESS® SABRE ES9023P DAC</h4>
+                        <span></span>
+                    </li>
+                    <li onclick="changePos(3)">
+                        <h4 class="txt-red">NICHICON CAPS</h4>
+                        <span></span>
+                    </li>
+                    <li onclick="changePos(4)">
+                        <h4 class="txt-red">GOLD-PLATED
+                            <br>AUDIO JACKS</h4>
+                        <span></span>
+                    </li>
+                    <li onclick="changePos(5)">
+                        <h4 class="txt-red">SWITCH MOSFETS</h4>
+                        <span></span>
+                    </li>
+                    <li id="dragger" class="pos3"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hd-sec-radar">
+            <div class="hd-w1200 txt-center">
+                <div class="hd-col80" style="margin:0 auto">
+                    <h3 class="txt-red">Scan and detect to dominate!</h3>
+                    <h4 class="txt-grey">Sonic Radar III</h4>
+                    <p class="hd-col80" style="position: relative; z-index: 2;">The immersive Sonic Radar III audio engine processes sounds more accurately than ever, so you're always
+                        aware of what's going on around you. Use the on-screen arrow to hone your enemy-pinpointing skills,
+                        and enjoy visualized audio detail that eliminates the need to crank up the volume. It's the perfect
+                        tool for practice rounds and tuning untrained ears.
+                        <br>
+                        <br>
+                        <span class="txt-grey">*Learn more about
+                            <a href="https://www.asus.com/Microsite/mb/ROG-supremefx-gaming-audio/#sonic_radar" target="_blank" class="hd-link">Sonic Radar III</a>.</span>
+                    </p>
+                </div>
+                <figure>
+                    <img class="hd-col65" src="img/audio.gif" id="audiogif" style="visibility: visible; opacity: 1">
+                </figure>
+                <ul class="txt-left">
+                    <li class="audio-tag">
+                        <h4 class="txt-red txt_decoline">Improved Audio Algorithm</h4>
+                        <small>The new Sonic Radar audio algorithm is now even more accurate to allow enemies to be pinpointed with
+                            even more accuracy.</small>
+                    </li>
+                    <li class="audio-tag">
+                        <h4 class="txt-red txt_decoline">3D Engine</h4>
+                        <small>Sonic Radar III is built around it's all new HUD with an in-game 3 dimensional arrow for a more intuitive
+                            experience.
+                        </small>
+                    </li>
+                    <li class="audio-tag">
+                        <h4 class="txt-red txt_decoline">Audio Boost</h4>
+                        <small>The new audio boost feature now allows the boosted audio to be heard directly.</small>
+                        <small class="txt-grey">*HUD: Head Up Display</small>
+                    </li>
+                    <li class="audio-tag">
+                        <h4 class="txt-red txt_decoline">Audio Radar</h4>
+                        <small>Sonic Radar 3 is effective regardless of surrounding noise and chaos.</small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="more">
+            <h2 class="txt-center">ROG
+                <span class="center">gives
+                    <br>you</span>
+                <span style="position: relative;"></span>more</h2>
+            <h3 class="txt-red txt-center">TEAM UP WITH US</h3>
+            <div class="hd-w800 txt-center" id="contact">
+                <p>
+                    <input type="email" id="email" placeholder="YOUR EMAIL">
+                    <span class="txt-red" style="font-size: 20px; font-family: 'Roboto', sans-serif; display: none;">Invalid email</span>
+                </p>
+                <p>
+                    <input type="text" id="phone" placeholder="YOUR PHONE NUMBER">
+                    <span class="txt-red" style="font-size: 20px; font-family: 'Roboto', sans-serif; display: none;">Invalid phone number</span>
+                </p>
+                <input id="send-bttn" type="submit" class="txt-red" value="SUBSCRIBE" onclick="return validate()" style="letter-spacing: 2px; font-size: 25px; border: 1px solid #ad0202; width: 35%; border-radius: 10px">
+            </div>
+        </div>
+        < </div>
+</body>
+<script src="js/effects.js"></script>
+
+</html>
